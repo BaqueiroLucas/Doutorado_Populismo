@@ -414,19 +414,13 @@ Esses procedimentos permitiram avaliar simultaneamente separação, homogeneidad
 
 # Integração Multinível
 
-Após a identificação dos perfis afetivos, inicia-se uma nova etapa da pesquisa.
+A etapa de integração multinível foi concluída mediante a incorporação de indicadores institucionais do Varieties of Democracy (V-Dem) à base analítica derivada do World Values Survey (WVS).
 
-Os indivíduos serão integrados a características dos respectivos contextos nacionais mediante a incorporação de indicadores provenientes do V-Dem.
+A integração foi realizada utilizando as variáveis `country_text_id` e `year`, preservando a observação individual como unidade fundamental de análise. A inexistência de duplicidades na base institucional permitiu uma integração do tipo *many-to-one*, assegurando a correspondência unívoca entre indivíduos e seus respectivos contextos nacionais.
 
-Em etapa posterior, informações partidárias oriundas do V-Party serão adicionadas à mesma base.
+A validação do procedimento indicou taxa de correspondência superior a 97% dos respondentes. Os casos sem correspondência concentram-se exclusivamente em Porto Rico (PRI), unidade presente no WVS, mas não contemplada como Estado soberano na versão utilizada do V-Dem.
 
-Essa estratégia permitirá combinar simultaneamente:
-
-- características individuais;
-- características institucionais;
-- características partidárias.
-
-A base integrada servirá de fundamento para os modelos estatísticos desenvolvidos nas etapas finais da tese.
+A base integrada passa a constituir a principal entrada para as etapas subsequentes da pesquisa.
 
 ---
 
@@ -656,9 +650,11 @@ Até o momento, encontram-se implementadas e validadas as seguintes etapas compu
 - identificação dos perfis afetivos;
 - validação estatística dos perfis;
 - exportação completa das tabelas e figuras;
-- organização definitiva da estrutura do projeto.
+- organização definitiva da estrutura do projeto;
+- integração multinível entre WVS e V-Dem;
+- validação da base analítica integrada.
 
-A próxima etapa consiste exclusivamente na integração da base individual com os indicadores institucionais do V-Dem.
+A próxima etapa consiste na incorporação das informações partidárias do V-Party e na preparação da base analítica final destinada às análises estatísticas relacionais.
 
 Nenhuma etapa posterior deverá modificar os resultados produzidos pelos experimentos já concluídos.
 
@@ -814,6 +810,10 @@ Até esta etapa foram produzidos, entre outros, os seguintes arquivos permanente
 
 - experimento4_coords_pca.parquet
 
+## Bases integradas
+
+- base_multinivel.parquet
+
 ---
 
 ## Resultados
@@ -848,34 +848,22 @@ As seguintes decisões metodológicas passam a ser consideradas definitivas para
 
 # Situação Atual
 
-A pesquisa encontra-se exatamente na transição entre dois níveis analíticos.
+A pesquisa concluiu a construção da base analítica multinível, integrando indicadores individuais do World Values Survey aos indicadores institucionais do Varieties of Democracy.
 
-As etapas concluídas concentraram-se na identificação da estrutura interna dos dados individuais.
+Todas as etapas exploratórias referentes aos dados individuais encontram-se consolidadas. As próximas etapas concentram-se na incorporação das características partidárias provenientes do V-Party e na realização das análises relacionais previstas no desenho metodológico da tese.
 
-As próximas etapas deslocam o foco para os fatores contextuais capazes de explicar a distribuição desses perfis entre diferentes países.
-
-Consequentemente, a pesquisa ingressa agora em sua fase propriamente comparativa.
 
 ---
 
 # Próxima Etapa
 
-O próximo notebook será dedicado exclusivamente à integração da base individual do World Values Survey com os indicadores institucionais do V-Dem.
+# Próxima Etapa
 
-Essa etapa possui natureza estritamente preparatória.
+O próximo notebook será dedicado à integração da base analítica multinível com os indicadores provenientes do V-Party.
 
-Seu objetivo consiste em produzir uma base integrada contendo simultaneamente:
+Essa etapa preservará a unidade de análise no nível do indivíduo e ampliará a base integrada mediante a incorporação de informações relativas aos sistemas partidários nacionais.
 
-- características individuais;
-- fatores latentes;
-- perfis afetivos;
-- indicadores institucionais do país e do ano correspondentes.
-
-Nenhuma hipótese será testada nesse notebook.
-
-Nenhuma análise inferencial deverá ser realizada.
-
-Ao final da etapa deverá existir apenas uma nova base integrada, reproduzível e documentada, pronta para utilização nas análises estatísticas subsequentes.
+Ao final dessa etapa, a pesquisa contará com uma base analítica consolidada contendo simultaneamente características individuais, institucionais e partidárias, apta à realização das análises estatísticas finais previstas no projeto.
 
 # Política de Manutenção da Documentação
 
