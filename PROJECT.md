@@ -4,8 +4,6 @@
 
 ## Identificação
 
-**Título provisório**
-
 **Populismo na Era de Narciso: Carisma, Identificação e Organização Política na América Contemporânea**
 
 Programa de Pós-Graduação em Ciência Política
