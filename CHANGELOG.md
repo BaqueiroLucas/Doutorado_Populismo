@@ -1,5 +1,37 @@
 # CHANGELOG
 
+## [v0.6.0] - 2026-06-29
+
+### Adicionado
+
+- Notebook `07_integracao_VPARTY.ipynb`.
+- Integração da base multinível WVS + V-Dem com indicadores partidários do V-Party.
+- Construção do recorte `vparty_americas.parquet`.
+- Construção da base agregada `vparty_agregado.parquet`.
+- Construção da base harmonizada `vparty_contexto.parquet`.
+- Construção da base analítica final `base_analitica.parquet`.
+
+### Decisões metodológicas
+
+- A integração com o V-Party não foi realizada diretamente por igualdade de ano.
+- Como o V-Party é organizado por eleições, foi adotado o critério da eleição imediatamente anterior ou coincidente ao ano da entrevista do WVS.
+- Os indicadores partidários foram agregados no nível país-eleição.
+- Não foi adotado limiar binário para classificação de partidos populistas.
+- O populismo partidário foi tratado como medida contínua.
+- Foram preservados indicadores de cobertura para análises de sensibilidade e robustez.
+
+### Resultados
+
+- A base analítica final preserva a unidade de análise no nível do indivíduo.
+- A base final integra variáveis individuais, fatores latentes, perfis afetivos, indicadores institucionais e indicadores partidários.
+- Porto Rico permanece sem correspondência nas integrações contextuais.
+- Os produtos intermediários foram preservados para reutilização em experimentos futuros.
+
+### Melhorias futuras
+
+- Refatorar `scripts/project_tools.py` em pacote modular.
+- Priorizar essa refatoração antes do início das análises relacionais do Notebook 08.
+
 \## \[v0.5.0] - 2026-06-28
 
 

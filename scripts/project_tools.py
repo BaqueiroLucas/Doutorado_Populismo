@@ -126,3 +126,43 @@ jupyterlab
         print(f"✔ Criado: {nome_arquivo}")
 
     print("\nDocumentação inicial concluída.")
+
+    # ============================================================
+# Relatórios padronizados de notebooks
+# ============================================================
+
+def relatorio_notebook(nome, base=None, produtos=None, proxima_etapa=None):
+    print("=" * 70)
+    print(nome.upper())
+    print("=" * 70)
+
+    if produtos is not None:
+        print("\nProdutos gerados")
+
+        for nome_produto, dataframe in produtos.items():
+            print(
+                f"{nome_produto:<28}"
+                f"{dataframe.shape[0]:>8,} linhas"
+                f" × {dataframe.shape[1]} colunas"
+            )
+
+    if base is not None:
+        print("\nBase analítica")
+
+        print(f"Observações : {len(base):,}")
+        print(f"Variáveis   : {base.shape[1]}")
+
+        if "country_text_id" in base.columns:
+            print(f"Países      : {base['country_text_id'].nunique()}")
+
+        if "year" in base.columns:
+            print(
+                f"Período     : "
+                f"{base['year'].min()}–{base['year'].max()}"
+            )
+
+    print("\nNotebook concluído com sucesso.")
+
+    if proxima_etapa is not None:
+        print("\nPróxima etapa:")
+        print(proxima_etapa)

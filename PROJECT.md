@@ -330,9 +330,11 @@ Serão selecionados apenas os indicadores necessários para responder às hipót
 
 ## V-Party
 
-A base V-Party será integrada posteriormente.
+O V-Dem CPD Party Dataset (V-Party) foi integrado à base multinível mediante a construção de indicadores agregados do sistema partidário no nível país-eleição.
 
-Seu objetivo consiste em acrescentar informações referentes aos partidos políticos presentes em cada contexto nacional, especialmente indicadores relacionados ao posicionamento ideológico, organização partidária e características populistas.
+A integração preserva a unidade de análise no nível do indivíduo, incorporando ao World Values Survey características estruturais dos sistemas partidários, incluindo organização, populismo, antipluralismo, posicionamento ideológico, clientelismo, polarização e indicadores de cobertura.
+
+Em razão da natureza eleitoral da base, adotou-se procedimento de harmonização temporal que associa cada entrevista do World Values Survey à eleição imediatamente anterior ou coincidente, preservando a precedência temporal entre contexto político e atitudes individuais.
 
 ---
 
@@ -421,6 +423,8 @@ A integração foi realizada utilizando as variáveis `country_text_id` e `year`
 A validação do procedimento indicou taxa de correspondência superior a 97% dos respondentes. Os casos sem correspondência concentram-se exclusivamente em Porto Rico (PRI), unidade presente no WVS, mas não contemplada como Estado soberano na versão utilizada do V-Dem.
 
 A base integrada passa a constituir a principal entrada para as etapas subsequentes da pesquisa.
+
+Posteriormente, essa base foi ampliada mediante integração com o V-Party, produzindo a base analítica definitiva da pesquisa (`base_analitica.parquet`), na qual coexistem variáveis individuais, institucionais e partidárias.
 
 ---
 
@@ -540,11 +544,13 @@ Integração V-Dem
 Integração V-Party
         │
         ▼
-Base Analítica Final
+Base Analítica
         │
         ▼
-Modelos Estatísticos
-```
+Análises Relacionais
+        │
+        ▼
+Modelagem Estatística
 
 Cada etapa produz novos arquivos sem modificar aqueles produzidos anteriormente.
 
@@ -652,13 +658,16 @@ Até o momento, encontram-se implementadas e validadas as seguintes etapas compu
 - exportação completa das tabelas e figuras;
 - organização definitiva da estrutura do projeto;
 - integração multinível entre WVS e V-Dem;
-- validação da base analítica integrada.
+- integração do V-Party;
+- harmonização temporal entre WVS e V-Party;
+- construção da base analítica definitiva;
+- validação completa da infraestrutura analítica.
 
-A próxima etapa consiste na incorporação das informações partidárias do V-Party e na preparação da base analítica final destinada às análises estatísticas relacionais.
+A infraestrutura de dados da pesquisa encontra-se concluída.
 
-Nenhuma etapa posterior deverá modificar os resultados produzidos pelos experimentos já concluídos.
+As etapas subsequentes dedicar-se-ão exclusivamente às análises relacionais e aos modelos explicativos previstos na tese.
 
-Esses resultados passam a constituir entradas fixas para o restante do pipeline analítico.
+Nenhuma etapa posterior deverá modificar as bases consolidadas, salvo justificativa metodológica expressa.
 
 # 6. Estado Atual da Pesquisa
 
@@ -814,6 +823,14 @@ Até esta etapa foram produzidos, entre outros, os seguintes arquivos permanente
 
 - base_multinivel.parquet
 
+- vparty_americas.parquet
+
+- vparty_agregado.parquet
+
+- vparty_contexto.parquet
+
+- base_analitica.parquet
+
 ---
 
 ## Resultados
@@ -844,26 +861,40 @@ As seguintes decisões metodológicas passam a ser consideradas definitivas para
 
 - Todas as etapas futuras deverão utilizar exclusivamente os arquivos persistidos em disco, evitando dependências de objetos presentes apenas na memória do ambiente computacional.
 
+- A integração temporal com o V-Party utiliza sempre a eleição imediatamente anterior ou coincidente ao ano da entrevista.
+
+- As medidas partidárias permanecem contínuas e ponderadas pelo peso eleitoral dos partidos, evitando classificações dicotômicas baseadas em limiares arbitrários.
+
+- Os indicadores de cobertura deverão permanecer na base analítica para utilização em análises de sensibilidade e robustez.
+
+- A `base_analitica.parquet` constitui a base oficial para todas as análises subsequentes da tese.
+
 ---
 
 # Situação Atual
 
-A pesquisa concluiu a construção da base analítica multinível, integrando indicadores individuais do World Values Survey aos indicadores institucionais do Varieties of Democracy.
+A pesquisa concluiu a construção da base analítica definitiva, integrando dados individuais do World Values Survey, indicadores institucionais do Varieties of Democracy (V-Dem) e características dos sistemas partidários provenientes do V-Party.
 
-Todas as etapas exploratórias referentes aos dados individuais encontram-se consolidadas. As próximas etapas concentram-se na incorporação das características partidárias provenientes do V-Party e na realização das análises relacionais previstas no desenho metodológico da tese.
+A infraestrutura empírica da tese encontra-se consolidada, documentada e reproduzível.
+
+As etapas futuras dedicar-se-ão exclusivamente à exploração analítica dessa base integrada.
 
 
 ---
 
 # Próxima Etapa
 
-# Próxima Etapa
+O próximo notebook iniciará a fase de análises relacionais da pesquisa.
 
-O próximo notebook será dedicado à integração da base analítica multinível com os indicadores provenientes do V-Party.
+Essa etapa utilizará diretamente a `base_analitica.parquet` para explorar as relações entre dimensões individuais, contextos institucionais e sistemas partidários.
 
-Essa etapa preservará a unidade de análise no nível do indivíduo e ampliará a base integrada mediante a incorporação de informações relativas aos sistemas partidários nacionais.
+As principais técnicas previstas incluem:
 
-Ao final dessa etapa, a pesquisa contará com uma base analítica consolidada contendo simultaneamente características individuais, institucionais e partidárias, apta à realização das análises estatísticas finais previstas no projeto.
+- Multiple Correspondence Analysis (MCA);
+- Multiple Factor Analysis (MFA);
+- Correspondence Analysis (CA);
+- modelos multinível;
+- análises relacionais de perfis políticos.
 
 # Política de Manutenção da Documentação
 
