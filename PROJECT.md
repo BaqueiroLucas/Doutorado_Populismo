@@ -32,9 +32,9 @@ Diferentemente do texto da tese, este documento possui natureza operacional. Seu
 
 Esta pesquisa investiga o populismo contemporâneo como uma lógica política relacional capaz de produzir identificação entre líderes e massas mediante a articulação entre dimensões discursivas, afetivas e organizacionais.
 
-Parte-se da hipótese de que o populismo não constitui uma ideologia específica nem pode ser reduzido exclusivamente a estratégias eleitorais ou estilos discursivos. Ao contrário, compreende-se o populismo como um processo relacional de construção política, no qual antagonismos entre "povo" e "elite" são produzidos e estabilizados por mecanismos de identificação coletiva, liderança carismática e formas específicas de organização política. :contentReference[oaicite:1]{index=1}
+Parte-se da hipótese de que o populismo não constitui uma ideologia específica nem pode ser reduzido exclusivamente a estratégias eleitorais ou estilos discursivos. Ao contrário, compreende-se o populismo como um processo relacional de construção política, no qual antagonismos entre "povo" e "elite" são produzidos e estabilizados por mecanismos de identificação coletiva, liderança carismática e formas específicas de organização política. 
 
-O foco empírico da pesquisa recai sobre a América contemporânea, especialmente no período compreendido entre a crise financeira internacional de 2008 e os processos políticos observados até 2027, contexto caracterizado pela intensificação da personalização da liderança política, pela desintermediação comunicacional e pela reorganização das formas tradicionais de representação política. :contentReference[oaicite:2]{index=2}
+O foco empírico da pesquisa recai sobre a América contemporânea, especialmente no período compreendido entre a crise financeira internacional de 2008 e os processos políticos observados até 2027, contexto caracterizado pela intensificação da personalização da liderança política, pela desintermediação comunicacional e pela reorganização das formas tradicionais de representação política. 
 
 ---
 
@@ -58,7 +58,7 @@ A pesquisa combina fundamentação teórica e análise empírica comparada.
 
 No plano empírico, utiliza bases internacionais amplamente consolidadas — World Values Survey (WVS), Varieties of Democracy (V-Dem) e V-Party — para reconstruir empiricamente as estruturas relacionais associadas ao populismo contemporâneo.
 
-A estratégia metodológica adota técnicas de redução dimensional e análise geométrica de dados para identificar estruturas latentes, construir tipologias e integrar informações provenientes de diferentes níveis analíticos (indivíduos, países e partidos políticos). :contentReference[oaicite:3]{index=3}
+A estratégia metodológica adota técnicas de redução dimensional e análise geométrica de dados para identificar estruturas latentes, construir tipologias e integrar informações provenientes de diferentes níveis analíticos (indivíduos, países e partidos políticos).
 
 ---
 
