@@ -1,4 +1,3 @@
-# README
 # Doutorado_Populismo
 
 Repositório de desenvolvimento computacional da pesquisa **Populismo na Era de Narciso: Carisma, Identificação e Organização Política na América Contemporânea**.
@@ -38,6 +37,6 @@ As bases brutas não são versionadas neste repositório, em razão de tamanho, 
 
 ## Autor
 
-Lucas Mariano Maciel-Baqueiro
+Pe. Lucas Mariano Maciel-Baqueiro, Cand. PhD., M.Sc.
 Programa de Pós-Graduação em Ciência Política
 Universidade Federal de São Carlos — UFSCar
